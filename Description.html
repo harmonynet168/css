@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover Effect</title>
+    <style>
+        .card .content h2{
+            font-size: 18px;
+        }
+
+        body{
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .card{
+            width: 400px;
+            aspect-ratio: 1 / 0.7;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card .image-box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 500ms ease-in-out;
+        }
+
+
+        .card::after{
+            content: "";
+            position: absolute;
+            inset: 10px;
+            border: 2px solid white;
+            border-radius: inherit;
+            opacity: 0;
+            transition: all 400ms ease-in-out;
+        }
+
+        .card:hover img{
+            filter: grayscale(1) brightness(0.4);
+        }
+
+        .card:hover::after{
+            opacity: 1;
+            inset: 20px;
+        }
+        
+        .content{
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
+        }
+
+        .content h2{
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .content p{
+            font-size: 12px;
+            margin-top: 8px;
+            color: rgb(179, 179, 179);
+        }
+
+        .card:hover .content{
+            opacity: 1; 
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="image-box">
+            <img src="./assets/9.jpg" alt="Image">
+        </div>
+        <div class="content">
+            <h2>Xuan Bang Tran, 2005</h2>
+            <p>Come from HaiPhong, Vietnam. 2nd student at UTC. Love music, dog, technology...</p>
+        </div>
+    </div>
+</body>
+</html>

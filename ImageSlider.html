@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:antiquewhite;
+        }
+        .container{
+            margin: 100px 0 0 200px;
+            width: 70%;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .container img{
+            width: 10%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255);
+            transition: ease-in-out 500ms;
+        }
+
+        .container img:hover{
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/1.jpg" alt="Anh 1">
+        <img src="./assets/6.jpg" alt="Anh 2">
+        <img src="./assets/7.jpg" alt="Anh 3">
+        <img src="./assets/8.jpg" alt="Anh 4">
+        <img src="./assets/2.jpg" alt="Anh 5">
+    </div>    
+</body>
+</html>
